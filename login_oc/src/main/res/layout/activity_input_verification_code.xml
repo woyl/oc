@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity"
+
+    android:background="@color/Cffffff"
+    tools:ignore="ResourceName">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@mipmap/icon_login_top_brg"
+        android:id="@+id/login_brg"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="wrap_content"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="3.5dp"
+        android:layout_marginLeft="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="输入短信验证码"
+        android:textColor="#ff000000"
+        android:textSize="18sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="验证码已发送至+15528388980"
+        android:textColor="#ff999999"
+        android:textSize="14sp"
+        />
+
+
+
+
+    <com.mkr.base_oc.views.VerCodeInputView
+        android:id="@+id/ver_input_code"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+
+
+    <TextView
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/Cffffff"
+        android:text="重发验证码"
+        android:background="@drawable/base_next_brg_radius_5dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">oc</string>
+    <string name="home">首页</string>
+    <string name="dynamic">动态</string>
+    <string name="message">消息</string>
+    <string name="mine">我</string>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginActivity"
+
+    android:background="@color/Cffffff"
+    tools:ignore="ResourceName">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@mipmap/icon_login_top_brg"
+        android:id="@+id/login_brg"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:drawablePadding="7dp"
+        android:gravity="center"
+        android:drawableLeft="@mipmap/icon_login_hello"
+        android:textSize="21sp"
+        android:text="Hello！"
+        android:textColor="@color/C000000"
+        android:layout_marginTop="4.5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:background="@drawable/base_edit_text_brg_radius_3dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="24dp"
+        android:id="@+id/ed_login_phone"
+        android:layout_width="match_parent"
+        android:paddingLeft="15dp"
+        android:textColorHint="@color/Ccccccc"
+        android:hint="输入手机号"
+        android:layout_height="45dp"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_next"
+        android:text="下一步"
+        android:textColor="@color/Cffffff"
+        android:textSize="16sp"
+        android:background="@drawable/base_btn_black_radius_5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+
+</LinearLayout>

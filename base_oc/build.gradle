@@ -1,0 +1,88 @@
+if (baseRunAlone.toBoolean()){
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+def config = rootProject.ext
+def android_config = rootProject.ext.android
+
+android {
+    compileSdkVersion android_config.compileSdkVersion
+    buildToolsVersion android_config.buildToolsVersion
+
+    defaultConfig {
+        if (baseRunAlone.toBoolean()){
+            applicationId "com.mkr.base_oc"
+        }
+
+        minSdkVersion android_config.minSdkVersion
+        targetSdkVersion android_config.targetSdkVersion
+        versionCode android_config.versionCode
+        versionName android_config.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    sourceSets {
+        main {
+            if (baseRunAlone.toBoolean()) {
+                manifest.srcFile 'src/main/mainfest/AndroidManifest.xml'
+            } else {
+                manifest.srcFile'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    kotlin {
+        experimental {
+            coroutines 'enable'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: '*.jar')
+    api("androidx.appcompat:appcompat:${ANDROIDX_APPCOMPAT_VERSION}")
+    api("androidx.legacy:legacy-support-v4:${LEGACY_X_VERSION}")
+    api("com.google.android.material:material:${MATERIAL_GOOGLE_VERSION}")
+    api("androidx.constraintlayout:constraintlayout:${CONSTRAINT_X_VERSION}")
+
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api 'androidx.core:core-ktx:1.3.1'
+    api 'androidx.constraintlayout:constraintlayout:1.1.3'
+    api files('libs/AMap2DMap_3.0.0_AMapSearch_3.6.1_AMapLocation_3.2.1_20161228.jar')
+    api files('libs/MiPush_SDK_Client_3_7_0.jar')
+    api files('libs/nim-push-7.8.0.jar')
+    api files('libs/vivo_pushsdk_v2.3.4.jar')
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    api config.recyclerview.recyclerview
+    api config.kotlinx.core
+    api config.kotlinx.android
+
+    implementation config.retrofit.converter
+    implementation config.interceptor.interceptor
+    implementation config.retrofit.scalars
+    api config.retrofit.coroutines
+
+
+    api config.glide.glide
+    annotationProcessor config.glide.annotationProcessor
+
+    api config.arouter.arouter
+
+    api project(':mylibrary')
+}

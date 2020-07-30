@@ -1,0 +1,11 @@
+include ':main_oc'
+include ':uikit'
+include ':base_oc'
+include ':login_oc'
+include ':message_oc'
+include ':dynamic_oc'
+include ':mine_oc'
+include ':home_oc'
+include ':mylibrary'
+include ':app'
+rootProject.name = "oc"

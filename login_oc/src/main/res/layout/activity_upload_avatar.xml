@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UploadAvatarActivity"
+    tools:ignore="ResourceName">
+
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:src="@mipmap/icon_update_head"
+        android:layout_height="wrap_content"/>
+
+
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="98dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上传你的头像"
+        android:textColor="@color/C000000"
+        android:textSize="18sp"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="35dp"
+        android:layout_below="@+id/tv_title"
+        android:layout_width="129dp"
+        android:layout_height="20dp"
+        android:text="请上传本人真实照片"
+        android:textColor="#ff999999"
+        android:textSize="14sp"
+        />
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll_layout"
+        android:background="@color/Cffffff"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:layout_below="@+id/tv_desc"
+        android:layout_width="120dp"
+        android:layout_height="120dp">
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="35dp"
+        android:layout_below="@+id/ll_layout"
+        android:layout_width="312dp"
+        android:layout_height="20dp"
+        android:text="上传五官清晰的照片作为头像才能获得探索、匹配"
+        android:textColor="#ff6bb9d1"
+        android:textSize="14sp"
+        />
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_error"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="35dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/icon_correct_brg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正确头像"
+                android:textColor="@color/C333333"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/icon_error_brg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="缺少五官"
+                android:textColor="@color/C333333"
+                android:textSize="12sp"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/icon_error_brg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="非人像"
+                android:textColor="@color/C333333"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/Cffffff"
+        android:textSize="16sp"
+        android:background="@drawable/base_next_brg_radius_5dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/rl_error"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+</RelativeLayout>

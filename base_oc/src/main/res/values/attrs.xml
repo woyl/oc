@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="VerCodeInputView">
+
+        <attr name="VerCodeInputView_inputNum" format="integer"/>
+        <attr name="VerCodeInputView_inputWidth" format="integer"/>
+        <attr name="VerCodeInputView_inputPadding" format="float"/>
+        <attr name="VerCodeInputView_inputTxtColor" format="string"/>
+        <attr name="VerCodeInputView_inputTxtSize" format="integer"/>
+        <attr name="VerCodeInputView_inputBg" format="integer"/>
+        <attr name="VerCodeInputView_inputType" format="integer"/>
+
+    </declare-styleable>
+
+
+</resources>
